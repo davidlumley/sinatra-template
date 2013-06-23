@@ -1,3 +1,4 @@
+# initial compile tasks taken from https://gist.github.com/jeffreyiacono/1772989#file-rakefile
 namespace :assets do
   require 'sprockets'
 
