@@ -5,8 +5,8 @@ unless ENV['RACK_ENV'] == 'production'
   map '/assets' do
     require 'sprockets'
     environment = Sprockets::Environment.new
-    environment.append_path 'app/assets/javascripts'
-    environment.append_path 'app/assets/stylesheets'
+    environment.append_path Assets::Javascripts::LOAD_PATH
+    environment.append_path Assets::Stylesheets::LOAD_PATH
     run environment
   end
 end
