@@ -21,7 +21,7 @@ namespace :assets do
     FileUtils.mkdir_p outfile.dirname
 
     asset.write_to(outfile)
-    puts "successfully compiled js assets"
+    puts "successfully compiled js assets to #{outfile}"
   end
 
   desc 'compile css assets'
@@ -35,7 +35,7 @@ namespace :assets do
     FileUtils.mkdir_p outfile.dirname
 
     asset.write_to(outfile)
-    puts "successfully compiled css assets"
+    puts "successfully compiled css assets to #{outfile}"
   end
 
   desc 'clean javascript assets'
