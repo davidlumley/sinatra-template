@@ -1,14 +1,12 @@
 #!/usr/bin/env rackup
 require File.expand_path("../config/boot", __FILE__)
 
-unless ENV['RACK_ENV'] == 'production'
-  map '/assets' do
-    require 'sprockets'
-    environment = Sprockets::Environment.new
-    environment.append_path Assets::Javascripts::LOAD_PATH
-    environment.append_path Assets::Stylesheets::LOAD_PATH
-    run environment
-  end
+map '/assets' do
+  require 'sprockets'
+  environment = Sprockets::Environment.new
+  environment.append_path Assets::Javascripts::LOAD_PATH
+  environment.append_path Assets::Stylesheets::LOAD_PATH
+  run environment
 end
 
 map '/' do
