@@ -7,6 +7,9 @@ gem 'sinatra',   :require => 'sinatra/base'
 gem 'rake'
 gem 'yajl-ruby', :require => 'yajl/json_gem'
 
+### Communication
+gem 'pony'
+
 ### Asset Management
 group :assets do
   gem 'sprockets'
