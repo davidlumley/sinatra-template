@@ -7,6 +7,13 @@ gem 'sinatra',   :require => 'sinatra/base'
 gem 'rake'
 gem 'yajl-ruby', :require => 'yajl/json_gem'
 
+### Database
+gem 'dm-core'
+gem 'dm-migrations'
+gem 'dm-timestamps'
+gem 'dm-validations'
+gem 'dm-types'
+
 ### Communication
 gem 'pony'
 
@@ -19,6 +26,12 @@ end
 
 ### Development Tools
 group :development, :test do
+  gem 'dm-sqlite-adapter'
   gem 'rack-livereload'
   gem 'guard-livereload', :require => nil
+end
+
+### Production
+group :production do
+  gem 'dm-postgres-adapter'
 end
