@@ -11,5 +11,5 @@ end
 
 map '/' do
   use Rack::LiveReload unless ENV['RACK_ENV'] == 'production'
-  run App
+  run SinatraApp::App
 end
