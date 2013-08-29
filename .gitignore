@@ -16,3 +16,7 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Local DB Files
+db/*.db
+db/*.sqlite3
