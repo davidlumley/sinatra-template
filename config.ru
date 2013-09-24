@@ -1,6 +1,10 @@
 #!/usr/bin/env rackup
 require File.expand_path("../config/boot", __FILE__)
 
+if ENV['SENTRY_DSN']
+  use Raven::Rack
+end
+
 map '/assets' do
   require 'sprockets'
   environment = Sprockets::Environment.new
