@@ -17,6 +17,9 @@ gem 'dm-types'
 ### Communication
 gem 'pony'
 
+### Error Reporting
+gem 'sentry-raven'
+
 ### Asset Management
 group :assets do
   gem 'sprockets'
